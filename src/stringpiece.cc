@@ -15,7 +15,7 @@
 #include <utility>
 #include "stringpiece.h"
 
-using operations_research::StringPiece;
+using strings::StringPiece;
 
 std::ostream& operator<<(std::ostream& o, const StringPiece& piece) {
   o.write(piece.data(), piece.size());
@@ -38,8 +38,8 @@ bool operator==(const StringPiece& x, const StringPiece& y) {
   return true;
 }
 
-bool operator<(const operations_research::StringPiece& x,
-               const operations_research::StringPiece& y) {
+bool operator<(const strings::StringPiece& x,
+               const strings::StringPiece& y) {
   const int r = memcmp(x.data(), y.data(), std::min(x.size(), y.size()));
   return ((r < 0) || ((r == 0) && (x.size() < y.size())));
 }

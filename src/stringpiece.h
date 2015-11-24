@@ -32,7 +32,7 @@
 #include <iosfwd>
 #include <string>
 
-namespace operations_research {
+namespace strings {
 
 class StringPiece {
  private:
@@ -146,36 +146,36 @@ class StringPiece {
   StringPiece substr(size_type pos, size_type n = npos) const;
 };
 
-}  // namespace operations_research
+}  // namespace strings
 
-bool operator==(const operations_research::StringPiece& x,
-                const operations_research::StringPiece& y);
+bool operator==(const strings::StringPiece& x,
+                const strings::StringPiece& y);
 
-inline bool operator!=(const operations_research::StringPiece& x,
-                       const operations_research::StringPiece& y) {
+inline bool operator!=(const strings::StringPiece& x,
+                       const strings::StringPiece& y) {
   return !(x == y);
 }
 
-bool operator<(const operations_research::StringPiece& x,
-               const operations_research::StringPiece& y);
+bool operator<(const strings::StringPiece& x,
+               const strings::StringPiece& y);
 
-inline bool operator>(const operations_research::StringPiece& x,
-                      const operations_research::StringPiece& y) {
+inline bool operator>(const strings::StringPiece& x,
+                      const strings::StringPiece& y) {
   return y < x;
 }
 
-inline bool operator<=(const operations_research::StringPiece& x,
-                       const operations_research::StringPiece& y) {
+inline bool operator<=(const strings::StringPiece& x,
+                       const strings::StringPiece& y) {
   return !(x > y);
 }
 
-inline bool operator>=(const operations_research::StringPiece& x,
-                       const operations_research::StringPiece& y) {
+inline bool operator>=(const strings::StringPiece& x,
+                       const strings::StringPiece& y) {
   return !(x < y);
 }
 
 // allow StringPiece to be logged
 extern std::ostream& operator<<(std::ostream& o,
-                                const operations_research::StringPiece& piece);
+                                const strings::StringPiece& piece);
 
 #endif  // OR_TOOLS_BASE_STRINGPIECE_H_

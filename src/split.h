@@ -22,7 +22,7 @@
 #include "integral_types.h"
 #include "stringpiece.h"
 
-namespace operations_research {
+namespace strings {
 // Split a std::string using a nul-terminated list of character
 // delimiters.  For each component, parse using the provided
 // parsing function and if successful, append it to 'result'.
@@ -46,7 +46,6 @@ bool SplitStringAndParse(StringPiece source, const std::string& delim,
 // character, this is fine, but if it contains more, then the meaning is
 // different: Split() should interpret the whole std::string as a delimiter. Fix
 // this.
-namespace strings {
 std::vector<std::string> Split(const std::string& full, const char* delim, int flags);
 
 // StringPiece version. Its advantages is that it avoids creating a lot of
@@ -62,7 +61,6 @@ inline const char* AnyOf(const char* x) { return x; }
 }  // namespace delimiter
 
 inline int SkipEmpty() { return 0xDEADBEEF; }
-}  // namespace strings
 
 // ###################### TEMPLATE INSTANTIATIONS BELOW #######################
 template <class T>
@@ -83,5 +81,5 @@ bool SplitStringAndParse(const std::string& source, const std::string& delim,
   return true;
 }
 
-}  // namespace operations_research
+}  // namespace strings
 #endif  // OR_TOOLS_BASE_SPLIT_H_

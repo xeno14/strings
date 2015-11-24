@@ -21,7 +21,7 @@
 #include "integral_types.h"
 #include "stringpiece.h"
 
-namespace operations_research {
+namespace strings {
 
 // A buffer size large enough for all FastToBuffer functions.
 const int kFastToBufferSize = 32;
@@ -130,7 +130,6 @@ void StrAppend(std::string* s, const AlphaNum& a, const AlphaNum& b,
                const AlphaNum& f, const AlphaNum& g, const AlphaNum& h,
                const AlphaNum& i, const AlphaNum& j, const AlphaNum& k);
 
-namespace strings {
 template <class Iterable>
 std::string Join(const Iterable& elements, const std::string& separator) {
   std::string out;
@@ -140,7 +139,6 @@ std::string Join(const Iterable& elements, const std::string& separator) {
   }
   return out;
 }
-}  // namespace strings
 
-}  // namespace operations_research
+}  // namespace strings
 #endif  // OR_TOOLS_BASE_JOIN_H_

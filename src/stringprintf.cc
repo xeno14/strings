@@ -28,7 +28,7 @@
 #endif
 #endif
 
-namespace operations_research {
+namespace strings {
 
 void StringAppendV(std::string* const dst, const char* const format, va_list ap) {
   // First try with a small fixed size buffer
@@ -106,4 +106,4 @@ void StringAppendF(std::string* const dst, const char* const format, ...) {
   StringAppendV(dst, format, ap);
   va_end(ap);
 }
-}  // namespace operations_research
+}  // namespace strings

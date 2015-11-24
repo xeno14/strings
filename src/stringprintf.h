@@ -18,9 +18,9 @@
 
 #include "stringpiece.h"
 
-namespace operations_research {
+namespace strings {
 std::string StringPrintf(const char* const format, ...);
 void SStringPrintf(std::string* const dst, const char* const format, ...);
 void StringAppendF(std::string* const dst, const char* const format, ...);
-}  // namespace operations_research
+}  // namespace strings
 #endif  // OR_TOOLS_BASE_STRINGPRINTF_H_

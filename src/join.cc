@@ -17,7 +17,7 @@
 #include "stringpiece.h"
 #include "stringprintf.h"
 
-namespace operations_research {
+namespace strings {
 // ----- StrCat -----
 
 static char* Append1(char* out, const AlphaNum& x) {
@@ -184,4 +184,4 @@ std::string StrCat(const AlphaNum& a, const AlphaNum& b, const AlphaNum& c,
   return out;
 }
 
-}  // namespace operations_research
+}  // namespace strings

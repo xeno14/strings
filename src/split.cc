@@ -18,7 +18,7 @@
 #endif  // _MSC_VER
 
 
-namespace operations_research {
+namespace strings {
 
 namespace {
 
@@ -67,8 +67,6 @@ static inline void InternalSplitStringUsing(const std::string& full,
 
 }  // namespace
 
-namespace strings {
-
 std::vector<std::string> Split(const std::string& full, const char* delim, int flags) {
   // CHECK_EQ(SkipEmpty(), flags);
   std::vector<std::string> out;
@@ -84,5 +82,3 @@ std::vector<StringPiece> Split(const std::string& full, const char* delim, int64
 }
 
 }  // namespace strings
-
-}  // namespace operations_research
